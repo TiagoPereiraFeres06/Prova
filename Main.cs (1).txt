@@ -1,0 +1,16 @@
+using System;
+
+public class Program
+{
+    public static void Main()
+    {
+        Console.WriteLine("Digite a primeira data (dd/mm/aaaa):");
+        DateTime data1 = DateTime.Parse(Console.ReadLine());
+
+        Console.WriteLine("Digite a segunda data (dd/mm/aaaa):");
+        DateTime data2 = DateTime.Parse(Console.ReadLine());
+
+        int diferencaDias = (data2 - data1).Days;
+        Console.WriteLine($"A diferença entre as datas é de {diferencaDias} dia(s).");
+        }
+}

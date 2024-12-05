@@ -1,0 +1,24 @@
+using System;
+
+public class Program
+{
+    public static void Main()
+    {
+        Console.WriteLine("Digite uma frase:");
+        string frase = Console.ReadLine();
+
+        int numeroPalavras = ContarPalavras(frase);
+        Console.WriteLine($"A frase contem {numeroPalavras} palavra(s).");
+    }
+
+    public static int ContarPalavras(string frase)
+    {
+        if (string.IsNullOrWhiteSpace(frase))
+        {
+            return 0;
+        }
+
+        string[] palavras = frase.Split(new char[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
+        return palavras.Length;
+    }
+}

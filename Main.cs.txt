@@ -1,0 +1,28 @@
+using System;
+
+public class Program
+{
+    public static void Main()
+    {
+        Console.WriteLine("Digite um valor inteiro:");
+        int valor = int.Parse(Console.ReadLine());
+        int valorOriginal = valor;
+        int[] notas = { 100, 50, 20, 10, 5, 2, 1 };
+
+        Console.WriteLine(valorOriginal);
+
+        foreach (int nota in notas)
+        {
+            int quantidade = valor / nota;
+            if (quantidade > 0)
+            {
+                Console.WriteLine($"{quantidade} nota(s) de {nota},00");
+            }
+            else
+            {
+                Console.WriteLine($"0 nota(s) de {nota},00");
+            }
+            valor %= nota;
+        }
+    }
+    }
